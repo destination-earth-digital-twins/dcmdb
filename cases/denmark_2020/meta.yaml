@@ -1,9 +1,9 @@
-dk500_case: 
+deode_dk500_feb09: 
 
-  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib_fp']
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
 
   atos:
-     path_template : 'ec:/miag/harmonie/dk500_case/%Y/%m/%d/%H/'
+     path_template : 'ec:/miag/harmonie/deode_dk500_feb09/%Y/%m/%d/%H/'
 
   domain : 
      name : 'DK500'
@@ -15,7 +15,7 @@ dini20a_case:
   file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib_fp']
 
   atos:
-     path_template : 'ec:/miag/harmonie/dini20a_case/%Y/%m/%d/%H/'
+     path_template : 'ec:/nhe/harmonie/dini20a_case/%Y/%m/%d/%H/'
 
   domain : 
      name : 'DINI20A'

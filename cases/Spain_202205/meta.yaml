@@ -10,12 +10,12 @@ AIB_43h221_de:
      resolution : 2500
      levels : 65
 
-AIB_DEODE_Beta:
+AIB_46h1_de2 :
 
   file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp','ICMSHHARM+0%LLL']
 
   atos:
-     path_template : 'ectmp:/sp0c/harmonie/AIB_DEODE_Beta/%Y/%m/%d/%H/'
+     path_template : 'ec:/mdk/harmonie/AIB_46h1_de2/%Y/%m/%d/%H/'
 
   domain : 
      name : 'IBERIAxl_2.5'
@@ -23,11 +23,11 @@ AIB_DEODE_Beta:
      levels : 65
 
 
-VAL500m_de:
+VAL500m_46h1_de2:
   file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp','ICMSHHARM+0%LLL','ICMSHHARM+0%LLL.sfx']
 
   atos:
-     path_template : 'ec:/mdk/harmonie/VAL500m_de/%Y/%m/%d/%H/'
+     path_template : 'ec:/mdk/harmonie/VAL500m_46h1_de2/%Y/%m/%d/%H/'
 
   domain :
      name : 'MEDv_0.5'

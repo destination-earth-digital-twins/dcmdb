@@ -1,0 +1,37 @@
+AUDE2018 500m:
+
+ file_templates : [‘historic.arome.aude_500-500m000+%LLLL_%LM.grib’,’grid.arome-forecast.aude0005+%LLLL_%LM.grib’]
+
+
+ atos:
+
+
+ path_template : 'ec:/rm6/AUDE2018/%Y/%m/%d/%H/'
+
+
+domain :
+
+    name : 'AUDE'
+
+    resolution : 500
+
+    levels : 120
+    
+AUDE2018 1.3km:
+
+ file_templates : [‘historic.arome.franmg-01km30+%LLLL_%LM.grib’]
+
+
+ atos:
+
+
+ path_template : 'ec:/rm6/AUDE2018/1.3km/%Y/%m/%d/%H/'
+
+
+domain :
+
+    name : 'AUDE'
+
+    resolution : 1300
+
+    levels : 90

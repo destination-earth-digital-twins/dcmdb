@@ -10,42 +10,67 @@ cy43_deode_ref_fin:
      resolution : 2500
      levels : 65
 
-cy46h1_deode_nest750_fin_v1:
+
+cy46h1_EDT_ref_fin:
 
   file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
 
   atos:
-     path_template : 'ectmp:/fie/harmonie/cy46h1_deode_nest750_fin_v1/%Y/%m/%d/%H/'
+     path_template : 'ec:/fie/harmonie/cy46h1_EDT_ref_fin/%Y/%m/%d/%H/'
 
-  domain : 
-     name : 'HERCULES750'
-     resolution : 750
-     levels : 90
-
-
-cy46h1_deode_down750_fin:
-
-  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
-
-  atos:
-     path_template : 'ectmp:/fie/harmonie/cy46h1_deode_down750_fin/%Y/%m/%d/%H/'
-
-  domain : 
-     name : 'HERCULES750'
-     resolution : 750
-     levels : 90
-
-
-cy46h1_deode_ref_fin:
-
-  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
-
-  atos:
-     path_template : 'ectmp:/fie/harmonie/cy46h1_deode_ref_fin/%Y/%m/%d/%H/'
-
-  domain : 
+  domain :
      name : 'METCOOP25D'
      resolution : 2500
      levels : 65
 
 
+cy46h1_EDT_s5d_n750:
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/fie/harmonie/cy46h1_EDT_s5d_n750/%Y/%m/%d/%H/'
+
+  domain :
+     name : 'HERCULES750'
+     resolution : 750
+     levels : 90
+
+
+cy46h1_EDT_s0d_n750_1500gp:
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/fie/harmonie/cy46h1_EDT_s0d_n750_1500gp/%Y/%m/%d/%H/'
+
+  domain :
+     name : 'HERCULES750_1500'
+     resolution : 750
+     levels : 90
+
+
+cy46h1_EDT_s0d_n500_1500gp:
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/fie/harmonie/cy46h1_EDT_s0d_n500_1500gp/%Y/%m/%d/%H/'
+
+  domain :
+     name : 'HERCULES500_1500'
+     resolution : 500
+     levels : 90
+
+
+cy46h1_EDT_s0d_n200_1500gp_pgdMPI:
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/fie/harmonie/cy46h1_EDT_s0d_n200_1500gp_pgdMPI/%Y/%m/%d/%H/'
+
+  domain :
+     name : 'HERCULES200_1500'
+     resolution : 200
+     levels : 90

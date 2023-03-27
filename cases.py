@@ -194,13 +194,13 @@ class Case():
           if host in val:
            if exp not in self.data[host]:
               self.data[host][exp] = {}
-           self.runs[exp]= Exp(exp, host, printlev, val, self.data[host][exp])
+           self.runs[exp]= Exp(case, exp, host, printlev, val, self.data[host][exp])
         else:
          for exp,val in props.items():
           if host in val:
            if exp not in self.data[host]:
               self.data[host][exp] = {}
-           self.runs= Exp(exp, host, printlev, val, self.data[host][exp])
+           self.runs= Exp(case, exp, host, printlev, val, self.data[host][exp])
         self.names= [x for x in props]
           
     def print(self,printlev=None):
@@ -270,8 +270,9 @@ class Case():
 #########################################################################
 class Exp():
 
-    def __init__(self, name, host, printlev, val, data):
+    def __init__(self, case, name, host, printlev, val, data):
 
+        self.case = case
         self.name = name
         self.host = host
         self.printlev = printlev
@@ -448,7 +449,20 @@ class Exp():
                 if re.match('^ec',example[0]):
                     if self.printlev > 2:
                         print("Checking",example[0])
-                    os.system('els -l {}'.format(example[0]))
+                    listcmd=['els','-l',example[0]]
+                    cmd = subprocess.Popen(listcmd, stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                    cmd_out, cmd_err = cmd.communicate()
+                    if cmd_out is not None: 
+                       for line in cmd_out.splitlines():
+                           tmp = line.decode("utf-8")
+                           print(tmp)
+                           if 'msdeode' not in tmp:
+                               print('ERROR:Wrong group for',self.case,':',self.name,tmp)
+
+                    if cmd_err is not None: 
+                       for line in cmd_err.splitlines():
+                           tmp = line.decode("utf-8")
+                           print('ERROR:Problem listing', self.case,':',self.name,tmp)
 
 #########################################################################
     def scan(self):
