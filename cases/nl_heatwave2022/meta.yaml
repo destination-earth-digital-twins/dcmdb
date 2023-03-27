@@ -1,21 +1,21 @@
-BL18_n0_2500m_red: 
+BL2_n0_2500m_red: 
 
   file_templates : ['ICMSHHARM+%LLLL_grib','ICMSHHARM+%LLLL_grib2']
 
   atos:
-     path_template : 'ec:/nkac/harmonie/WP7_D1/2.5km/BL18_n0_2500m_red/%Y/%m/%d/%H/'
+     path_template : 'ec:/nkac/harmonie/WP7_D1/2.5km/BL2_n0_2500m_red/%Y/%m/%d/%H/'
 
   domain : 
      name : 'NETHERLANDS'
      resolution : 2500
      levels : 90
 
-BL18_n1_1300m_red: 
+BL2_n1_1300m_red: 
 
   file_templates : ['ICMSHHARM+%LLLL_grib','ICMSHHARM+%LLLL_grib2']
 
   atos:
-     path_template : 'ec:/nkac/harmonie/WP7_D1/1.3km/BL18_n1_1300m_red/%Y/%m/%d/%H/'
+     path_template : 'ec:/nkac/harmonie/WP7_D1/1.3km/BL2_n1_1300m_red/%Y/%m/%d/%H/'
 
   domain : 
      name : 'NETHERLANDS'

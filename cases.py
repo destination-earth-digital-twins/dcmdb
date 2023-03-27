@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from pathlib import Path
 from datetime import datetime
 import os
 import sys
@@ -156,10 +157,28 @@ class Cases:
         os.system(cmd)
         rhost = remote['host']
         rpath = remote['outpath']
-        cmd=f'rsync -vaux {outpath}/ {rhost}:{rpath}/'
+        cmd=f'rsync -r {outpath}/ {rhost}:{rpath}/'
         print(cmd)
         os.system(cmd)
 #########################################################################
+def gl(files, suffix):
+
+    for file in files:
+        # Add the suffix to the filename
+        grib_file = file.stem + suffix + file.suffix
+        grib_filec = grib_file + '_c'
+        
+        # Convert the file to GRIB2 format
+        cmd = f'wgrib2 {file} -match ":(TMP|UGRD|VGRD):" -new_grid_winds earth -no_header -grib {grib_file}'
+        Path(grib_file).unlink(missing_ok=True)
+        Path(grib_filec).unlink(missing_ok=True)
+        os.system(cmd)
+
+        # Change the packing type to grid_ccsds
+        cmd = f'grib_set -r -s packingType=grid_ccsds {grib_file} {grib_filec}'
+        os.system(cmd)
+########################################################
+
 class Case():
 
     def __init__(self, host, path, printlev, props, case):

@@ -1,0 +1,11 @@
+BL19_n1_1300m_red: 
+
+  file_templates : ['ICMSHHARM+%LLLL_grib','ICMSHHARM+%LLLL_grib2']
+
+  atos:
+     path_template : 'ec:/nkac/harmonie/WP7_D1/1.3km/BL19_n1_1300m_red/%Y/%m/%d/%H/'
+
+  domain : 
+     name : 'NETHERLANDS'
+     resolution : 1300
+     levels : 90
