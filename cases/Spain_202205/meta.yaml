@@ -12,7 +12,7 @@ AIB_43h221_de:
 
 AIB_46h1_de2 :
 
-  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp','ICMSHHARM+0%LLL']
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp','fc%Y%m%d%H+%LLLgrib2','ICMSHHARM+0%LLL']
 
   atos:
      path_template : 'ec:/mdk/harmonie/AIB_46h1_de2/%Y/%m/%d/%H/'
@@ -24,7 +24,7 @@ AIB_46h1_de2 :
 
 
 VAL500m_46h1_de2:
-  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp','ICMSHHARM+0%LLL','ICMSHHARM+0%LLL.sfx']
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp','fc%Y%m%d%H+%LLLgrib2','ICMSHHARM+0%LLL']
 
   atos:
      path_template : 'ec:/mdk/harmonie/VAL500m_46h1_de2/%Y/%m/%d/%H/'

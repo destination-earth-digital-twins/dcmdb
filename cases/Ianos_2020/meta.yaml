@@ -1,6 +1,6 @@
 IANOS_43h221_de:
 
-  file_templates : ['fc%Y%m%d%H+%LLLgrib2_fp','ICMSHHARM+0%LLL']
+  file_templates : ['fc%Y%m%d%H+%LLLgrib2_fp','fc%Y%m%d%H+%LLLgrib_sfxs','ICMSHHARM+0%LLL']
 
   atos:
      path_template : 'ec:/mdk/harmonie/IANOS_43h221_de/%Y/%m/%d/%H/'
@@ -10,11 +10,24 @@ IANOS_43h221_de:
      resolution : 2500
      levels : 65
 
-IANOS500m_de:
-  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp','ICMSHHARM+0%LLL']
+IANOS_46h1_de2:
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp','fc%Y%m%d%H+%LLLgrib2','ICMSHHARM+0%LLL']
 
   atos:
-     path_template : 'ec:/mdk/harmonie/IANOS500m_de/%Y/%m/%d/%H/'
+     path_template : 'ec:/mdk/harmonie/IANOS_46h1_de2/%Y/%m/%d/%H/'
+
+  domain :
+     name : 'IANOS_2.5'
+     resolution : 2500
+     levels : 65
+
+     
+IANOS500m_46h1_de2:
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp','fc%Y%m%d%H+%LLLgrib2','ICMSHHARM+0%LLL']
+
+  atos:
+     path_template : 'ec:/mdk/harmonie/IANOS500m_46h1_de2/%Y/%m/%d/%H/'
 
   domain :
      name : 'IANOS_0.5'
