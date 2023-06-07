@@ -4,6 +4,9 @@
 # Example on how to transfer data from atos to lumi.
 # Data will be temporary located under hpc-login:$SCRATCH/case/run/...
 #
+# See https://github.com/DEODE-NWP/WP53/wiki/Transfer-your-case-to-lumi for setup guidance.
+#
+#
 # Ulf Andrae, SMHI, 2023
 #
 
