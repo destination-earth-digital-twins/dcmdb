@@ -233,8 +233,12 @@ class Case:
         if len(props) > 1:
             for exp, val in props.items():
                 if host in val:
-                    if exp not in self.data[host]:
-                        self.data[host][exp] = {}
+                    try:
+                        if exp not in self.data[host]:
+                            self.data[host][exp] = {}
+                    except KeyError:
+                         self.data[host]={}
+                         self.data[host][exp] = {}
                     self.runs[exp] = Exp(
                         path, case, exp, host, printlev, val, self.data[host][exp]
                     )

@@ -1,9 +1,9 @@
 NEWREF:
 
-  file_templates : ['ALAD_NEWREF_%Y%m%d%H.tar']
+  file_templates : ['CZ1K_2017%m%d%H+%LLLL.grb2']
 
   atos:
-     path_template : 'ec:/cza/deode/NEWREF/'
+     path_template : 'ec:/cza/deode/case_new/%Y%m%d%H'
 
   domain : 
      name : 'CZ1K'
@@ -13,10 +13,10 @@ NEWREF:
 
 OLDREF:
 
-  file_templates : ['ALAD_OLDREF_%Y%m%d%H.tar']
+  file_templates : ['CZ1K_2017%m%d%H+%LLLL.grb2']
 
   atos:
-     path_template : 'ec:/cza/deode/OLDREF/'
+     path_template : 'ec:/cza/deode/case_old/%Y%m%d%H'
 
   domain : 
      name : 'CZ1K'

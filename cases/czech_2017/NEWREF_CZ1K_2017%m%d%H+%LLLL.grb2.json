@@ -1,0 +1,110 @@
+{ "messages" : [ 
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 52,
+    "level": 2,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "rh"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 162,
+    "level": 10,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "~"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 11,
+    "level": 2,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "t"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 130,
+    "level": 0,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "ugst"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 34,
+    "level": 10,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "v"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 33,
+    "level": 10,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "u"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 131,
+    "level": 0,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "vgst"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 31,
+    "level": 10,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "wdir"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 32,
+    "level": 10,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "ws"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 2,
+    "level": 0,
+    "typeOfLevel": "meanSea",
+    "stepType": "instant",
+    "shortName": "msl"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 171,
+    "level": 0,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "tcc"
+  },
+  {
+    "discipline": 0,
+    "parameterCategory": 192,
+    "parameterNumber": 61,
+    "level": 0,
+    "typeOfLevel": "heightAboveGround",
+    "stepType": "instant",
+    "shortName": "tprec"
+  }
+]}
