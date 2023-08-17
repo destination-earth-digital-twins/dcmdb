@@ -1,0 +1,50 @@
+#
+# Define one or several transfer settings as 
+# transfer1 :
+# ...
+# transferN :
+#
+
+main_transfer:
+
+  #
+  # For each transfer we can define the following
+  #
+ 
+  # The remote host, i.e. lumi
+  #remote = "my_lumi_user@lumi.csc.fi"
+  remote : "lumi_transfer"
+
+  # Specify the case and the run as a selection defined as
+  # a string, list or dictionary of cases
+  # selection : "case"
+  # selection : ["case1", ... ,"caseN"]
+  # selection : {"case1" : RUNS }
+  # selection : {"case1" : RUNS1 , ..., "caseN" : RUNSN }
+  # where RUNS could be "run" or ["run1", ..., "runN"]
+
+  selection : { "benelux_heatwave_2018" : ["AQ_Benelux_750m_grib_archive","AQD2_25kmL90"] }
+
+  # Define the period to transfer using 
+  # sdate : "%Y-%m-%d %H"
+  # edate : "%Y-%m-%d %H"
+  # step : "%H:%M:%S"
+  # leave empty to fecth all
+  #sdate : "2021-08-16 00"
+  #edate : "2021-08-16 06"
+  #step : "03:00:00"
+
+  # As an alternative specify a list of dates with the "%Y-%m-%d %H" format
+  # dates : []
+
+  # Define leadtimes to transfer using
+  #stime : "%H:%M:%S"
+  #etime : "%H:%M:%S"
+  #leadtime_step : "%H:%M:%S"
+  #stime : "00:00:00"
+  #etime : "03:00:00"
+  #leadtime_step : "01:00:00"
+
+  # As an alternative specify a list of leadtimes in seconds
+  # leadtimes : []
+
