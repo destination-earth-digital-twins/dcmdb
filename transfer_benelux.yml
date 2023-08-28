@@ -23,7 +23,7 @@ main_transfer:
   # selection : {"case1" : RUNS1 , ..., "caseN" : RUNSN }
   # where RUNS could be "run" or ["run1", ..., "runN"]
 
-  selection : { "benelux_heatwave_2018" : ["AQ_Benelux_750m_grib_archive","AQD2_25kmL90"] }
+  selection : { "benelux_heatwave_2018" : ["AQ_Benelux_750m_grib_archive","AQ_Benelux_25kmL90"] }
 
   # Define the period to transfer using 
   # sdate : "%Y-%m-%d %H"

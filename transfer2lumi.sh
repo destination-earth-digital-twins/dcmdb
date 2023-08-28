@@ -6,9 +6,9 @@
 # Choose the queue
 #SBATCH --qos=nf
 # Wall clock time limit
-#SBATCH --time=24:00:00
+#SBATCH --time=48:00:00
 # This is the job
 
 module load python3
 
-python3 transfer2lumi.py -c transfer.yml
+python3 transfer2lumi.py -c transfer_benelux.yml
