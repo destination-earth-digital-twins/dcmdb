@@ -9,3 +9,39 @@ deode_ierain_ref:
      name : 'IRELAND25_090'
      resolution : 2500
      levels : 65
+
+deode_ierain_vhrifs: 
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/duca/DEODE/deode_ierain_vhrifs/%Y/%m/%d/%H/'
+
+  domain : 
+     name : 'IRL500SE'
+     resolution : 500
+     levels : 90
+
+deode_ierain_vhrhar0: 
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/duca/DEODE/deode_ierain_vhrhar0/%Y/%m/%d/%H/'
+
+  domain : 
+     name : 'IRL500SE'
+     resolution : 500
+     levels : 90
+
+deode_ierain_vhrhar3: 
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/duca/DEODE/deode_ierain_vhrhar3/%Y/%m/%d/%H/'
+
+  domain : 
+     name : 'IRL500SE'
+     resolution : 500
+     levels : 90

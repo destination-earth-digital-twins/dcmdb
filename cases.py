@@ -167,7 +167,7 @@ class Cases:
             if re.match("^ec", f):
                 ecfs_copy(f, outpath, self.printlev)
             else:
-                sys.exit()
+                os.symlink(f, os.path.join(outpath, os.path.basename(f)))
 
     #########################################################################
     def clean(self, files=[], outpath="."):

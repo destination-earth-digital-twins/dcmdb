@@ -5,6 +5,9 @@ NEWREF:
   atos:
      path_template : 'ec:/cza/deode/case_new/%Y%m%d%H'
 
+  lumi_transfer:
+     path_template : '/scratch/project_462000140/de_33050_common_data/cases/czech_2017/case_new/%Y%m%d%H'   
+
   domain : 
      name : 'CZ1K'
      resolution : 1000m
@@ -17,6 +20,9 @@ OLDREF:
 
   atos:
      path_template : 'ec:/cza/deode/case_old/%Y%m%d%H'
+
+  lumi_transfer:
+     path_template : '/scratch/project_462000140/de_33050_common_data/cases/czech_2017/case_old/%Y%m%d%H'
 
   domain : 
      name : 'CZ1K'
