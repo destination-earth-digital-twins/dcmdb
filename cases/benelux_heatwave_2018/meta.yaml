@@ -6,7 +6,7 @@ AQ_Benelux_25kmL90:
      path_template : '/scratch/nhad/benelux_heatwave_2018/AQ_Benelux_25kmL90/%Y/%m/%d/%H/'
 
   lumi_transfer:
-     path_template : '/scratch/project_465000527/de_33050_common_data/cases/benelux_heatwave_2018/AQD2_25kmL90/%Y/%m/%d/%H/'
+     path_template : '/scratch/project_465000527/de_33050_common_data/cases/benelux_heatwave_2018/AQ_Benelux_25kmL90/%Y/%m/%d/%H/'
   
   domain : 
      name : 'NETHERLANDS'
