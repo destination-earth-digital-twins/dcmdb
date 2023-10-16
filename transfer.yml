@@ -25,14 +25,19 @@ main_transfer:
 
   selection : { 'gavle_2021' : ['deode_cy46ref'] }
 
+  # Define possible file selection, as given in the meta.yml file.
+  # For the time being it's only possible to select one file.
+  # If not given all defined files are selected
+  # file_template : 'fc%Y%m%d%H+%LLLgrib2_fp'
+
   # Define the period to transfer using 
   # sdate : "%Y-%m-%d %H"
   # edate : "%Y-%m-%d %H"
   # step : "%H:%M:%S"
   # leave empty to fecth all
-  sdate : "2021-08-16 00"
-  edate : "2021-08-16 06"
-  step : "03:00:00"
+  # sdate : "2021-08-16 00"
+  # edate : "2021-08-16 06"
+  # step : "03:00:00"
 
   # As an alternative specify a list of dates with the "%Y-%m-%d %H" format
   # dates : []
@@ -41,9 +46,9 @@ main_transfer:
   # stime : "%H:%M:%S"
   # etime : "%H:%M:%S"
   # leadtime_step : "%H:%M:%S"
-  stime : "00:00:00"
-  etime : "03:00:00"
-  leadtime_step : "01:00:00"
+  # stime : "00:00:00"
+  # etime : "03:00:00"
+  # leadtime_step : "01:00:00"
 
   # As an alternative specify a list of leadtimes in seconds
   # leadtimes : []

@@ -1,0 +1,15 @@
+Testing:
+
+  file_templates : ['%LLL']
+
+  atos:
+     path_template : '/scratch/nhad/benelux_heatwave_2018/AQ_Benelux_750m_grib_archive/%Y/%m/%d/%H/'
+
+  lumi_transfer:
+     path_template : '/scratch/project_465000527/de_33050_common_data/cases2/testing/Testing/%Y/%m/%d/%H/'
+
+  domain : 
+     name : 'NETHERLANDS'
+     resolution : 750
+     levels : 90
+

@@ -210,6 +210,8 @@ class Cases:
         missing_files = self.check_remote(files, remote)
 
         if len(missing_files) > 0:
+            nfiles = len(missing_files)
+            print(f"  Transfer {nfiles} files this date")
             clean = self.get(files, outpath)
             cmd = 'ssh {} "mkdir -p {}"'.format(remote["host"], remote["outpath"])
             print(cmd)

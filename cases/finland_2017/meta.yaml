@@ -74,3 +74,19 @@ cy46h1_EDT_s0d_n200_1500gp_pgdMPI:
      name : 'HERCULES200_1500'
      resolution : 200
      levels : 90
+
+
+cy46h1_DEDT_500m_1500gp_Conn3:
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/fie/harmonie/cy46h1_DEDT_500m_1500gp_Conn3/%Y/%m/%d/%H/'
+
+  lumi_transfer:
+     path_template : '/scratch/project_465000527/de_33050_common_data/cases/finland_2017/cy46h1_DEDT_500m_1500gp_Conn3/%Y/%m/%d/%H/'
+
+  domain :
+     name : 'Con3_500_1500'
+     resolution : 500
+     levels : 90

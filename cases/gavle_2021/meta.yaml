@@ -6,7 +6,22 @@ deode_cy46ref:
      path_template : 'ec:/smb/harmonie/deode_cy46ref/%Y/%m/%d/%H/'
 
   lumi_transfer:
-     path_template : '/scratch/project_462000140/de_33050_common_data/cases/gavle_2021/deode_cy46ref/%Y/%m/%d/%H/'
+     path_template : '/scratch/project_465000527/de_33050_common_data/cases/gavle_2021/deode_cy46ref/%Y/%m/%d/%H/'
+
+  domain : 
+     name : 'METCOOP25D'
+     resolution : 2500
+     levels : 65
+
+deode_cy46ref_long:
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/smb/harmonie/deode_cy46ref_long/%Y/%m/%d/%H/'
+
+  lumi_transfer:
+     path_template : '/scratch/project_465000527/de_33050_common_data/cases/gavle_2021/deode_cy46ref_long/%Y/%m/%d/%H/'
 
   domain : 
      name : 'METCOOP25D'
@@ -24,3 +39,31 @@ deode_cy46750:
      name : 'SOMETHING'
      resolution : 750
      levels : 65
+
+deode_cy46750_long:
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/smb/harmonie/deode_cy46750_long/%Y/%m/%d/%H/'
+  lumi_transfer:
+     path_template : '/scratch/project_465000527/de_33050_common_data/cases/gavle_2021/deode_cy46750_long/%Y/%m/%d/%H/'
+
+  domain : 
+     name : 'SOMETHING'
+     resolution : 750
+     levels : 65
+
+deode_cy46500:
+
+  file_templates : ['fc%Y%m%d%H+%LLLgrib_sfxs','fc%Y%m%d%H+%LLLgrib2_fp']
+
+  atos:
+     path_template : 'ec:/smb/harmonie/deode_cy46500/%Y/%m/%d/%H/'
+  lumi_transfer:
+     path_template : '/scratch/project_465000527/de_33050_common_data/cases/gavle_2021/deode_cy46500/%Y/%m/%d/%H/'
+
+  domain : 
+     name : 'SOMETHING'
+     resolution : 500
+     levels : 90
