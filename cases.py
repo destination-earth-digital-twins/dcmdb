@@ -5,6 +5,7 @@ import os
 import re
 import subprocess
 import sys
+import shutil
 from datetime import datetime
 
 import yaml
@@ -163,11 +164,17 @@ class Cases:
     #########################################################################
     def get(self, files=[], outpath="."):
 
+        clean = True
         for f in files:
             if re.match("^ec", f):
                 ecfs_copy(f, outpath, self.printlev)
             else:
-                os.symlink(f, os.path.join(outpath, os.path.basename(f)))
+                try:
+                  os.symlink(f, os.path.join(outpath, os.path.basename(f)))
+                except FileExistsError:
+                  clean = False
+
+        return clean
 
     #########################################################################
     def clean(self, files=[], outpath="."):
@@ -203,16 +210,17 @@ class Cases:
         missing_files = self.check_remote(files, remote)
 
         if len(missing_files) > 0:
-            self.get(files, outpath)
+            clean = self.get(files, outpath)
             cmd = 'ssh {} "mkdir -p {}"'.format(remote["host"], remote["outpath"])
             print(cmd)
             os.system(cmd)
             rhost = remote["host"]
             rpath = remote["outpath"]
-            cmd = f"rsync -vaux {outpath}/ {rhost}:{rpath}/"
+            cmd = f"rsync -vaux --copy-unsafe-links {outpath}/ {rhost}:{rpath}/"
             print(cmd)
             os.system(cmd)
-            self.clean(files, outpath)
+            if clean:
+              self.clean(files, outpath)
         else:
             nfiles = len(files)
             print(f"  all {nfiles} files already in place for this date")
