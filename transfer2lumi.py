@@ -36,8 +36,9 @@ def check_config(config):
             sys.exit()
         for group, items in GROUPS.items():
             explicit = group in val
+
             found = [x for x in items if x in val]
-            if explicit and len(found) > 0:
+            if explicit and len(found) > 1:
                 print(f"Specify either {group} or {items} for {key}")
                 sys.exit()
             elif not explicit and len(found) < 3 and len(found) > 0:
@@ -51,7 +52,6 @@ def check_config(config):
                     edate = datetime.strptime(val["edate"], "%Y-%m-%d %H")
                     step = step2td(val["step"])
                     config[key][group] = expand_dates(sdate, edate, step)
-
                 if group == "leadtimes":
                     for y in items:
                         config[key][y] = step2td(val[y])
@@ -60,7 +60,10 @@ def check_config(config):
                         config[key]["etime"],
                         config[key]["leadtime_step"],
                     )
-
+           
+            elif explicit and len(found) == 0:
+                if group in val:
+                    config[key][group] = [ datetime.strptime(x, "%Y-%m-%d %H") for x in val[group]]
             elif not explicit and len(found) == 0:
                 config[key][group] = []
 
@@ -90,6 +93,7 @@ def transfer(cfg):
     # Load the metadata
     example = Cases(selection=cfg["selection"], printlev=0, host="atos")
 
+
     for case in example.names:
         for exp in example.cases.names:
             if cfg["remote"] not in example.meta[case][exp]:
@@ -102,7 +106,6 @@ def transfer(cfg):
             scratch_template = os.path.join(
                 os.environ["SCRATCH"], case, exp, "%Y/%m/%d/%H/"
             )
-
 
             i=0
             file_template_used = None
@@ -122,14 +125,13 @@ def transfer(cfg):
                 continue
 
             for date in x[file_template].keys():
-
                 if len(cfg["dates"]) > 0:
                     cdate = datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
                     if cdate not in cfg["dates"]:
                         continue
 
                 print(" fetch:", date)
-
+                
                 # Parse the paths and expand the dates
                 remote_outpath = hub(outpath_template, date)
                 scratch_outpath = hub(scratch_template, date)
